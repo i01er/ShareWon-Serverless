@@ -1,0 +1,23 @@
+{
+  "name": "sharewon-serverless",
+  "version": "1.0.0",
+  "description": "Serverless ShareWon Wallet",
+  "main": "index.js",
+  "dependencies": {
+    "stellar-sdk": "^5.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i01er/ShareWon-Serverless.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i01er/ShareWon-Serverless/issues"
+  },
+  "homepage": "https://github.com/i01er/ShareWon-Serverless#readme"
+}
