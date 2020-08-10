@@ -12,7 +12,7 @@ exports.handler = async function(event, context) {
 	const account = await server.loadAccount(sourceAccount.publicKey());
 	const fee = await server.fetchBaseFee();
   
-  var data = await server.accounts()
+  var create = await server.accounts()
       .accountId(sourceAccount.publicKey())
       .call()
       .then(({ sequence }) => {
@@ -23,6 +23,10 @@ exports.handler = async function(event, context) {
           .addOperation(StellarSdk.Operation.createAccount({
             destination: createdAccount.publicKey(),
             startingBalance: '1'
+          }))
+          .addOperation(StellarSdk.Operation.changeTrust({
+              asset: sharewon,
+              source: createdAccount.publicKey()
           }))
           .setTimeout(30)
           .build()
@@ -47,7 +51,7 @@ exports.handler = async function(event, context) {
           var resp = {
             statusCode: 500,
             body: JSON.stringify({
-              successful: false
+              successful: false,
               message: results
             })
           };
@@ -55,5 +59,7 @@ exports.handler = async function(event, context) {
         }
       });
 
-  return data;
+  return create;
 };
+
+exports.handler();

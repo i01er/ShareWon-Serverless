@@ -1,5 +1,5 @@
 # ShareWon-Serverless
-The Serverless function of ShareWon Wallet
+The Serverless function of ShareWon Wallet. This project is using AWS Lambda and API Gateway to provide different serverless functions for the ShareWon wallet. However, some of the essential features may require modifying local source code.
 
 ### Create Wallet Function
 API Endpoint
@@ -23,3 +23,8 @@ TBC
 
 ## Test it on premise
 If you wish to test it on premise, download this repo and run ```npm install```. After installed npm package, run ```node create.js``` to test create.js.
+
+## Blockchain Explorer
+Every transaction will be "on chain", therefore we could use Stellar Blockchain Explorer to view the transaction for more information.
+
+[StellarChain.io TESTNET](http://testnet.stellarchain.io/)
