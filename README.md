@@ -4,7 +4,7 @@ The Serverless function of ShareWon Wallet. This project is using AWS Lambda and
 ### Create Wallet Function
 API Endpoint
 
-```https://r1i8uw8ivh.execute-api.us-east-2.amazonaws.com/testing/events```
+```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/create```
 
 Return Format
 ```
@@ -14,11 +14,23 @@ Return Format
 ### Sending ShareWon
 API Endpoint
 
-```TBC```
+```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/send```
+
+Request Body
+```
+{
+    "sendAddress": "GBFV4G24Y7YSHKCBQVRITOBUKA5PNUIEPUQOKWIZ3IELR2K4U5RBVUYF",
+    "sendAmount": 20,
+    "secret": "SBHFOFRLXJHCPI646BWFD6XHA3ECN7E5VMWI3HNKHFBM5POIDW5MVPGE"
+}
+```
 
 Return Format
 ```
-TBC
+{
+  "statusCode": 200,
+  "body": "{\"successful\":true,\"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/867d54c51c361508643547efa1d7c86893c6d2bb81ff3b7174f8149cbdcfd4ed\"}"
+}
 ```
 
 ## Test it on premise

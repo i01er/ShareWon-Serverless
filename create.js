@@ -6,7 +6,6 @@ exports.handler = async function (event, context) {
   const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 
   // Create new wallet account
-
   var createdAccount = StellarSdk.Keypair.random()
 
   const account = await server.loadAccount(sourceAccount.publicKey());
