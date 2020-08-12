@@ -30,7 +30,7 @@ exports.handler = async function (event, context) {
         .build();
 
         transaction.sign(changeAccount);
-        console.log(transaction.toEnvelope().toXDR('base64'));
+        // console.log(transaction.toEnvelope().toXDR('base64'));
 
         try {
           const transactionResult = await server.submitTransaction(transaction);
@@ -59,17 +59,17 @@ exports.handler = async function (event, context) {
       transaction.sign(sourceAccount)
       return server.submitTransaction(transaction)
     })
-    .then(await function (results) {
+    .then(async function (results) {
       // console.log('Transaction', results._links.transaction.href);
       if (results.successful) {
         console.log('New Keypair', createdAccount.publicKey(), createdAccount.secret());
         console.log("account created");
-        changeTrust(createdAccount);
+        var change = await changeTrust(createdAccount);
         var resp = {
           statusCode: 200,
           body: JSON.stringify({
             successful: true,
-            userID: event.userID,
+            // userID: event.userID,
             PublicKey: createdAccount.publicKey(),
             SecretKey: createdAccount.secret()
           })

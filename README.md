@@ -1,4 +1,4 @@
-# ShareWon-Serverless
+# ShareWon-Serverless [TESTING]
 The Serverless function of ShareWon Wallet. This project is using AWS Lambda and API Gateway to provide different serverless functions for the ShareWon wallet. However, some of the essential features may require modifying local source code.
 
 ### Create Wallet Function
