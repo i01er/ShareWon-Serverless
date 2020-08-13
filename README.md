@@ -6,9 +6,19 @@ API Endpoint
 
 ```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/create```
 
+Request Body
+```
+{
+    "userID": "Chris1135"
+}
+```
+
 Return Format
 ```
-{"statusCode":200,"body":"{\"successful\":true,\"PublicKey\":\"GCCLSNQLQSEQPR5CNVFTZBVA65E476XCTVEB4Z3UWAEPWRYZYHY5HGZB\",\"SecretKey\":\"SBXCG7KLRIP37HFACR6U2SKSY7C7RJ4LLBHLXIUQG223D2WDMRLPV53S\"}"}
+{
+  "statusCode": 200,
+  "body": "{\"successful\":true,\"userID\":\"Chris1135\",\"PublicKey\":\"GAXJ4ZXEBNYOZSDC5G6BLWGISYUOEL4R76WJLOI62RBAPEL7KE5VCKLG\",\"SecretKey\":\"SCTUVGZ3VABKO6PX7HMUR2QB2OQVOCCZWINVPH4GU6VZLEFTIDWTSLQD\"}"
+}
 ```
 
 ### Sending ShareWon
