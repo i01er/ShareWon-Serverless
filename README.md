@@ -29,9 +29,9 @@ API Endpoint
 Request Body
 ```
 {
-    "sendAddress": "GBFV4G24Y7YSHKCBQVRITOBUKA5PNUIEPUQOKWIZ3IELR2K4U5RBVUYF",
+    "sendAddress": "GBFV4G24Y7YSHKCBQVRITOBUKA5PNUIEPUQOKWIZ3IELR2K4U5RBVUYF",      //Receiver public key
     "sendAmount": 20,
-    "secret": "SBHFOFRLXJHCPI646BWFD6XHA3ECN7E5VMWI3HNKHFBM5POIDW5MVPGE"
+    "secret": "SBHFOFRLXJHCPI646BWFD6XHA3ECN7E5VMWI3HNKHFBM5POIDW5MVPGE"            //The sender secret key
 }
 ```
 
@@ -39,7 +39,53 @@ Return Format
 ```
 {
   "statusCode": 200,
-  "body": "{\"successful\":true,\"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/867d54c51c361508643547efa1d7c86893c6d2bb81ff3b7174f8149cbdcfd4ed\"}"
+  "body": "{\"successful\":true,\"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/7cb6ff2a4eacad6f7aa1c75065a85586e5d63465a02e5aaf9498f582e1089183\"}"
+}
+```
+
+### Get Testing Funds
+If you wish to get some ShareWon for testing transaction API, you can call ```getfund```.
+<br>
+
+API Endpoint
+
+```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/getfund```
+
+Request Body
+```
+{
+  "sendAddress": "GCO42Y7IIP6TFRTKKD57VGMNGEULCOEJGOD32PGWM4M3HB2FAKYR3FWI"
+}
+```
+
+Return Format
+```
+{
+  "statusCode": 200,
+  "body": "{\"successful\":true,\"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/1346530a0f16510712148e780eb4966a6b927d3acae8d3e222792d4fd9dd23ec\"}"
+}
+```
+
+### Check Balance
+Check your ShareWon wallet balance.
+<br>
+
+API Endpoint
+
+```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/balance```
+
+Request Body
+```
+{
+  "address": "GCO42Y7IIP6TFRTKKD57VGMNGEULCOEJGOD32PGWM4M3HB2FAKYR3FWI"
+}
+```
+
+Return Format
+```
+{
+    "statusCode": 200,
+    "body": "{\"successful\":true,\"account\":\"GD2SIXBHFK7KB6OJRKBTNCV24J56ZOUKL2ZQLIJUBM2T2NFYV4QSRYPM\",\"assetName\":\"ShareTEST\",\"balance\":\"150.0000000\"}"
 }
 ```
 
