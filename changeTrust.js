@@ -1,24 +1,10 @@
-exports.handler = async function (event, context) {
-  // var sendAddress = null;
-  // var sendAmount = null;
-  // var secret = null;
-
-  // process.argv.forEach(function (val, index, array) {
-  //     if(index==2)sendAddress = val;
-  //     if(index==3)sendAmount = val;
-  //     if(index==4)secret = val;
-  // });
+exports.handler = async function (event) {
   var StellarSdk = require("stellar-sdk");
   var sharewon = new StellarSdk.Asset("ShareTEST", "GBMMVGV4BDIY2X3SKKH6OF2IYRKVO2EK4WVJRO3ZMTGQCBBK3NVXJ4QT");
   const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
   const fee = await server.fetchBaseFee();
 
-
   var keypair = StellarSdk.Keypair.fromSecret("SBNYGNRMC3WSAUTDQ7Y6ZUV2DGBJHOF4K4CAFIP7VSMHNSF3GGQTLUBM");
-
-  // console.log("Addr: " + sendAddress);
-  // console.log("Secret: " + secret);
-  // console.log("Amount: " + sendAmount);
 
   // Trust ShareWon
   var changeTrust = async function (changeAccount) {
@@ -54,4 +40,4 @@ exports.handler = async function (event, context) {
   changeTrust(keypair);
 };
 
-exports.handler();
+exports.handler().then(console.log);

@@ -31,7 +31,7 @@ exports.handler = async (event) => {
               message: "Success! View the transaction at: " + transactionResult._links.transaction.href
           })
       };
-      return resp;
+      return console.log(resp);
   } catch (e) {
       var resp = {
           statusCode: 400,
@@ -40,6 +40,8 @@ exports.handler = async (event) => {
               message: "An error has occured: " + e
           })
       };
-      return resp;
+      return console.log(resp);
   }
 };
+
+exports.handler().then(console.log);

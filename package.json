@@ -4,6 +4,7 @@
   "description": "Serverless ShareWon Wallet",
   "main": "index.js",
   "dependencies": {
+    "request": "^2.88.2",
     "stellar-sdk": "^5.0.4"
   },
   "devDependencies": {},

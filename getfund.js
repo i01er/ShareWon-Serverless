@@ -41,3 +41,5 @@ exports.handler = async (event) => {
         return resp;
     }
 };
+
+exports.handler().then(console.log);

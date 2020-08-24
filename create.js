@@ -62,6 +62,7 @@ exports.handler = async function (event) {
       })
     };
     return resp;
+
   } catch (error) {
     var resp = {
       statusCode: 400,
@@ -74,4 +75,4 @@ exports.handler = async function (event) {
   }
 };
 
-exports.handler();
+exports.handler().then(console.log);
