@@ -17,7 +17,11 @@ Return Format
 ```
 {
   "statusCode": 200,
-  "body": "{\"successful\":true,\"userID\":\"Chris1135\",\"PublicKey\":\"GAXJ4ZXEBNYOZSDC5G6BLWGISYUOEL4R76WJLOI62RBAPEL7KE5VCKLG\",\"SecretKey\":\"SCTUVGZ3VABKO6PX7HMUR2QB2OQVOCCZWINVPH4GU6VZLEFTIDWTSLQD\"}"
+  "body": "{\"successful\":true,
+    \"userID\":\"Chris1135\",
+    \"PublicKey\":\"GAXJ4ZXEBNYOZSDC5G6BLWGISYUOEL4R76WJLOI62RBAPEL7KE5VCKLG\",
+    \"SecretKey\":\"SCTUVGZ3VABKO6PX7HMUR2QB2OQVOCCZWINVPH4GU6VZLEFTIDWTSLQD\"
+  }"
 }
 ```
 
@@ -39,7 +43,9 @@ Return Format
 ```
 {
   "statusCode": 200,
-  "body": "{\"successful\":true,\"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/7cb6ff2a4eacad6f7aa1c75065a85586e5d63465a02e5aaf9498f582e1089183\"}"
+  "body": "{\"successful\":true,
+    \"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/7cb6ff2a4eacad6f7aa1c75065a85586e5d63465a02e5aaf9498f582e1089183\"
+  }"
 }
 ```
 
@@ -62,7 +68,9 @@ Return Format
 ```
 {
   "statusCode": 200,
-  "body": "{\"successful\":true,\"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/1346530a0f16510712148e780eb4966a6b927d3acae8d3e222792d4fd9dd23ec\"}"
+  "body": "{\"successful\":true,
+    \"message\":\"Success! View the transaction at: https://horizon-testnet.stellar.org/transactions/1346530a0f16510712148e780eb4966a6b927d3acae8d3e222792d4fd9dd23ec\"
+  }"
 }
 ```
 
@@ -85,7 +93,52 @@ Return Format
 ```
 {
     "statusCode": 200,
-    "body": "{\"successful\":true,\"account\":\"GD2SIXBHFK7KB6OJRKBTNCV24J56ZOUKL2ZQLIJUBM2T2NFYV4QSRYPM\",\"assetName\":\"ShareTEST\",\"balance\":\"150.0000000\"}"
+    "body": "{\"successful\":true,
+      \"account\":\"GD2SIXBHFK7KB6OJRKBTNCV24J56ZOUKL2ZQLIJUBM2T2NFYV4QSRYPM\",
+      \"assetName\":\"ShareTEST\",
+      \"balance\":\"150.0000000\"
+    }"
+}
+```
+
+### History
+Check your ShareWon wallet transaction history.
+<br>
+
+API Endpoint
+
+```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/history```
+
+Request Body
+```
+{
+  "address": "GBM4FKY5VUEYP6GE4QV5S6LP3LRLKI3WYGXJH3MIOZYDZWADD25XNN6Y"
+}
+```
+
+Return Format
+```
+{
+  "statusCode": 200,
+  "body": "{\"successful\":true,
+  \"history\":[
+    {\"to\":\"GBM4FKY5VUEYP6GE4QV5S6LP3LRLKI3WYGXJH3MIOZYDZWADD25XNN6Y\",
+    \"from\":\"GAQAJNSSNHKQMDZVDZPCFJN7REHESNFNOVVCMIJ4AD57KJVO4QWUPCI3\",
+    \"asset_code\":\"ShareTEST\",
+    \"amount\":\"300.0000000\"},
+    {\"to\":\"GBM4FKY5VUEYP6GE4QV5S6LP3LRLKI3WYGXJH3MIOZYDZWADD25XNN6Y\",
+    \"from\":\"GAQAJNSSNHKQMDZVDZPCFJN7REHESNFNOVVCMIJ4AD57KJVO4QWUPCI3\",
+    \"asset_code\":\"ShareTEST\",
+    \"amount\":\"350.0000000\"},
+    {\"to\":\"GBM4FKY5VUEYP6GE4QV5S6LP3LRLKI3WYGXJH3MIOZYDZWADD25XNN6Y\",
+    \"from\":\"GAQAJNSSNHKQMDZVDZPCFJN7REHESNFNOVVCMIJ4AD57KJVO4QWUPCI3\",
+    \"asset_code\":\"ShareTEST\",
+    \"amount\":\"377.0000000\"},
+    {\"to\":\"GAQAJNSSNHKQMDZVDZPCFJN7REHESNFNOVVCMIJ4AD57KJVO4QWUPCI3\",
+    \"from\":\"GBM4FKY5VUEYP6GE4QV5S6LP3LRLKI3WYGXJH3MIOZYDZWADD25XNN6Y\",
+    \"asset_code\":\"ShareTEST\",
+    \"amount\":\"27.0000000\"}
+  ]}"
 }
 ```
 
