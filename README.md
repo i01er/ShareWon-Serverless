@@ -6,6 +6,11 @@ API Endpoint
 
 ```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/create```
 
+Request Method
+```
+POST
+```
+
 Request Body
 ```
 {
@@ -29,6 +34,11 @@ Return Format
 API Endpoint
 
 ```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/send```
+
+Request Method
+```
+POST
+```
 
 Request Body
 ```
@@ -57,6 +67,11 @@ API Endpoint
 
 ```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/getfund```
 
+Request Method
+```
+POST
+```
+
 Request Body
 ```
 {
@@ -81,6 +96,11 @@ Check your ShareWon wallet balance.
 API Endpoint
 
 ```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/balance```
+
+Request Method
+```
+POST
+```
 
 Request Body
 ```
@@ -108,6 +128,11 @@ Check your ShareWon wallet transaction history.
 API Endpoint
 
 ```https://rj8xxfulmk.execute-api.us-east-2.amazonaws.com/testing/history```
+
+Request Method
+```
+POST
+```
 
 Request Body
 ```
